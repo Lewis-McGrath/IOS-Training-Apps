@@ -13,6 +13,7 @@
 		8082D9D51F59AD6E00E084C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8082D9D41F59AD6E00E084C9 /* Assets.xcassets */; };
 		8082D9D81F59AD6E00E084C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8082D9D61F59AD6E00E084C9 /* LaunchScreen.storyboard */; };
 		8082D9E01F59B3F100E084C9 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8082D9DF1F59B3F100E084C9 /* UIButtonExt.swift */; };
+		8082D9E21F59C36000E084C9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8082D9E11F59C36000E084C9 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8082D9D71F59AD6E00E084C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8082D9D91F59AD6E00E084C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8082D9DF1F59B3F100E084C9 /* UIButtonExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		8082D9E11F59C36000E084C9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8082D9D61F59AD6E00E084C9 /* LaunchScreen.storyboard */,
 				8082D9D91F59AD6E00E084C9 /* Info.plist */,
 				8082D9DF1F59B3F100E084C9 /* UIButtonExt.swift */,
+				8082D9E11F59C36000E084C9 /* Helpers.swift */,
 			);
 			path = "extensions-dance-party";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				8082D9D01F59AD6E00E084C9 /* ViewController.swift in Sources */,
 				8082D9E01F59B3F100E084C9 /* UIButtonExt.swift in Sources */,
 				8082D9CE1F59AD6E00E084C9 /* AppDelegate.swift in Sources */,
+				8082D9E21F59C36000E084C9 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

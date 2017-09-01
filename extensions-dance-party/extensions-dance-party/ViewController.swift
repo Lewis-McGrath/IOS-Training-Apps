@@ -23,14 +23,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func colourisedButtonWasPressed(_ sender: Any) {
+        colouriseButton.colourise()
     }
     
 
     @IBAction func wiggleButtonWasPressed(_ sender: Any) {
+        wiggleButton.wiggle()
     }
 
     
     @IBAction func dimButtonWasPressed(_ sender: Any) {
+        dimButton.dim()
     }
     
 }
