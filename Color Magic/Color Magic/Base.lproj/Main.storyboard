@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DXY-nX-et3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Color Magic-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ColorPresenterVC" customModule="Color_Magic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Grey is boring! Choose a color" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKI-GM-Ozh">
+                                <rect key="frame" x="16" y="263" width="343" height="141"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BKI-GM-Ozh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oNF-Z5-414"/>
+                            <constraint firstItem="BKI-GM-Ozh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tnc-tX-StT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Color Magic" id="INa-GB-q7I">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Ecg-0G-cKk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8Jo-60-ykL">
+                            <color key="tintColor" red="0.25173228979110718" green="0.23318684101104736" blue="0.059928692877292633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="wfH-lY-OAG" kind="show" identifier="presentColorPickerVC" id="Kid-PJ-ao1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="colorNameLabel" destination="BKI-GM-Ozh" id="aaV-XK-XQD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Color PickerVC-->
+        <scene sceneID="5WE-82-P33">
+            <objects>
+                <viewController id="wfH-lY-OAG" customClass="ColorPickerVC" customModule="Color_Magic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5DT-du-Ptg"/>
+                        <viewControllerLayoutGuide type="bottom" id="yaU-OK-APz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="heW-2y-DO9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kOD-um-Ih8">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOU-Hq-TxG">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="120.5"/>
+                                        <color key="backgroundColor" red="0.4797663688659668" green="0.90236872434616089" blue="0.05426798015832901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Green">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorButtonWasPressedWithSender:" destination="wfH-lY-OAG" eventType="touchUpInside" id="vSL-9m-Uqi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5e9-bn-zSU">
+                                        <rect key="frame" x="0.0" y="120.5" width="343" height="120.5"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Orange">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorButtonWasPressedWithSender:" destination="wfH-lY-OAG" eventType="touchUpInside" id="J0o-L8-UAH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZ9-8H-saF">
+                                        <rect key="frame" x="0.0" y="241" width="343" height="121"/>
+                                        <color key="backgroundColor" red="0.057041078805923462" green="0.6913260817527771" blue="0.88743311166763306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Blue">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorButtonWasPressedWithSender:" destination="wfH-lY-OAG" eventType="touchUpInside" id="Lr2-wc-vea"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0j-JZ-VsH">
+                                        <rect key="frame" x="0.0" y="362" width="343" height="120.5"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Red">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorButtonWasPressedWithSender:" destination="wfH-lY-OAG" eventType="touchUpInside" id="xgv-wA-1b7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-zZ-B1U">
+                                        <rect key="frame" x="0.0" y="482.5" width="343" height="120.5"/>
+                                        <color key="backgroundColor" red="0.63794112205505371" green="0.088913969695568085" blue="0.55886334180831909" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Purple">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorButtonWasPressedWithSender:" destination="wfH-lY-OAG" eventType="touchUpInside" id="9Wr-dF-B7A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yaU-OK-APz" firstAttribute="top" secondItem="kOD-um-Ih8" secondAttribute="bottom" id="6Ad-4k-iRX"/>
+                            <constraint firstItem="kOD-um-Ih8" firstAttribute="leading" secondItem="heW-2y-DO9" secondAttribute="leadingMargin" id="at9-gt-ijN"/>
+                            <constraint firstItem="kOD-um-Ih8" firstAttribute="top" secondItem="5DT-du-Ptg" secondAttribute="bottom" id="cqL-cI-ORJ"/>
+                            <constraint firstItem="yaU-OK-APz" firstAttribute="top" secondItem="kOD-um-Ih8" secondAttribute="bottom" id="mmP-Yl-hoO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kOD-um-Ih8" secondAttribute="trailing" id="oYq-ix-b82"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMh-bZ-4Zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751.2" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uy3-da-ARa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DXY-nX-et3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mdz-Zh-fzM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="nlw-pD-5XD">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="s1f-xh-Gog"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HwL-Dt-lzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="136"/>
+        </scene>
+    </scenes>
+</document>
