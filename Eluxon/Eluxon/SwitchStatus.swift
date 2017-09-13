@@ -9,7 +9,8 @@
 import Foundation
 
 enum SwitchStatus: Togglable {
-    case on, off
+    case on
+    case off
     
     mutating func toggle() {
         switch self {
